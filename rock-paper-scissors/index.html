@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
+
+    <section id="stats">
+      <h3>Round 1</h3>
+      <div class="stats">
+        <div class="player">
+          <h2 class="player--name">You</h2>
+          <p class="player--choice">?</p>
+        </div>
+        <div class="ratio">
+          <p id="player-wins">0</p>
+          <p>:</p>
+          <p id="computer-wins">0</p>
+        </div>
+        <div class="player">
+          <h2 class="player--name">Computer</h2>
+          <p class="player--choice">?</p>
+        </div>
+      </div>
+      <p>First to 5 Wins!</p>
+    </section>
+
+    <section id="choice">
+      <h1>Choose Your Weapon</h1>
+      <div class="choices">
+        <div id="rock">
+          <h4>Rock</h4>
+          <img src="./public/rock.png" alt="rock" />
+        </div>
+        <div id="paper">
+          <h4>Paper</h4>
+          <img src="./public/paper.png" alt="paper" />
+        </div>
+        <div id="scissors">
+          <h4>Scissors</h4>
+          <img src="./public/scissors.png" alt="scissors" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Developed by
+        <a href="http://github.com/nathandallas">Nathan Challender</a>
+        <br />Icons by <a href="https://www.flaticon.com/">flaticon</a>
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
