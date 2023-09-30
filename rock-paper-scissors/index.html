@@ -19,9 +19,9 @@
           <p class="player--choice">?</p>
         </div>
         <div class="ratio">
-          <p id="player-wins">0</p>
+          <p id="player-score">0</p>
           <p>:</p>
-          <p id="computer-wins">0</p>
+          <p id="computer-score">0</p>
         </div>
         <div class="player">
           <h2 class="player--name">Computer</h2>
@@ -29,25 +29,28 @@
         </div>
       </div>
       <p>First to 5 Wins!</p>
+      <h3 class="round-results"></h3>
     </section>
 
     <section id="choice">
       <h1>Choose Your Weapon</h1>
       <div class="choices">
-        <div id="rock">
-          <h4>Rock</h4>
+        <button class="choice" id="rock">
+          Rock
           <img src="./public/rock.png" alt="rock" />
-        </div>
-        <div id="paper">
-          <h4>Paper</h4>
+        </button>
+        <button class="choice" id="paper">
+          Paper
           <img src="./public/paper.png" alt="paper" />
-        </div>
-        <div id="scissors">
-          <h4>Scissors</h4>
+        </button>
+        <button class="choice" id="scissors">
+          Scissors
           <img src="./public/scissors.png" alt="scissors" />
-        </div>
+        </button>
       </div>
     </section>
+
+    <section id="replay"><button id="replay">Play Again?</button></section>
 
     <footer>
       <p>
@@ -60,6 +63,6 @@
     <!-- Scripts -->
     <script src="script.js"></script>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
