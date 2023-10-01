@@ -8,11 +8,17 @@ const playerScore = document.querySelector("#player-score");
 const playerPick = document.querySelector(".player--choice");
 const computerScore = document.querySelector("#computer-score");
 const computerPick = document.querySelector(".computer--choice");
+const rounds = document.querySelector(".rounds");
+let toggle = document.getElementById("replay");
 
+const winnerResults = {
+  computer: "You lost the game!",
+  player: "You won the game!",
+};
 let computerChoices = ["Rock", "Paper", "Scissors"];
 let playerPoints = 0;
 let computerPoints = 0;
-let playerChoice;
+let round = 1;
 
 // Functions
 
@@ -21,7 +27,6 @@ function computerPlay() {
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
   computerPick.textContent = result;
   return result;
-  console.log(result);
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -40,12 +45,34 @@ function playRound(playerSelection, computerSelection) {
     console.log(playerSelection, computerSelection);
     roundResults.textContent = `${computerSelection} beats ${playerSelection}! You lose!`;
   }
+  checkWinner();
+}
 
-  
+function checkWinner() {
+  if (computerPoints === 5 || playerPoints === 5) {
+    let win = `${computerPoints > playerPoints ? "computer" : "player"}`;
+    selection.forEach(button =>
+      button.removeEventListener("click", getPlayerChoice)
+    );
+    roundResults.textContent = winnerResults[win];
+    toggle.classList.toggle("hide");
+  }
 }
 
 function handleReplay() {
-  location.reload();
+  playerPick.textContent = "?";
+  computerPick.textContent = "?";
+  playerPoints = 0;
+  playerScore.textContent = "0";
+  computerPoints = 0;
+  computerScore.textContent = "0";
+  roundResults.textContent = "";
+  selection.forEach(button =>
+    button.addEventListener("click", getPlayerChoice)
+  );
+  toggle.classList.toggle("hide");
+  round++;
+  rounds.textContent = `Round ${round}`;
 }
 
 function getPlayerChoice(e) {
@@ -56,5 +83,5 @@ function getPlayerChoice(e) {
 
 // Event Listeners
 
-replay.addEventListener("click", handleReplay);
 selection.forEach(button => button.addEventListener("click", getPlayerChoice));
+replay.addEventListener("click", handleReplay);

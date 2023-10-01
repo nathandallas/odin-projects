@@ -89,16 +89,14 @@ section {
 
 #replay {
   max-width: 600px;
-  display: flex;
 }
 
 button#replay {
-  margin: 2rem auto;
   text-align: center;
   font-size: 1.5rem;
   border: 2px solid #3d4186;
   background-color: #646cff;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   border-radius: 1rem;
   &:hover {
     background-color: #646cff60;
@@ -106,9 +104,20 @@ button#replay {
   }
 }
 
+button.hide {
+  display: none;
+}
+
 img {
   width: 100px;
   height: 100px;
+}
+
+.results {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 1rem;
 }
 
 footer {

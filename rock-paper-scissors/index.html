@@ -12,24 +12,28 @@
     </header>
 
     <section id="stats">
-      <h3>Round 1</h3>
+      <h3 class="rounds">Round 1</h3>
       <div class="stats">
         <div class="player">
           <h2 class="player--name">You</h2>
-          <p class="player--choice">?</p>
+          <h2 class="player--choice">?</h2>
         </div>
         <div class="ratio">
-          <p id="player-score">0</p>
-          <p>:</p>
-          <p id="computer-score">0</p>
+          <h2 id="player-score">0</h2>
+          <h2>:</h2>
+          <h2 id="computer-score">0</h2>
         </div>
         <div class="player">
           <h2 class="player--name">Computer</h2>
-          <p class="computer--choice">?</p>
+          <h2 class="computer--choice">?</h2>
         </div>
       </div>
       <p>First to 5 Wins!</p>
-      <h3 class="round-results"></h3>
+    </section>
+
+    <section class="results">
+      <h2 class="round-results"></h2>
+      <button id="replay" class="hide">Play Again?</button>
     </section>
 
     <section id="choice">
@@ -49,8 +53,6 @@
         </button>
       </div>
     </section>
-
-    <section id="replay"><button id="replay">Play Again?</button></section>
 
     <footer>
       <p>
