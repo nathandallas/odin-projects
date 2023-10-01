@@ -19,9 +19,30 @@ let playerChoice;
 function computerPlay() {
   let result =
     computerChoices[Math.floor(Math.random() * computerChoices.length)];
+  computerPick.textContent = result;
   return result;
+  console.log(result);
 }
 
+function playRound(playerSelection, computerSelection) {
+  let roundWinCombo = `${playerSelection}-${computerSelection}`;
+  let playerWinCombo = [`Rock-Scissors`, `Scissors-Paper`, `Paper-Rock`];
+
+  if (playerSelection === computerSelection) {
+    roundResults.textContent = "Tie!";
+    console.log(playerSelection, computerSelection);
+  } else if (playerWinCombo.includes(roundWinCombo)) {
+    playerScore.textContent = ++playerPoints;
+    console.log(playerSelection, computerSelection);
+    roundResults.textContent = `${playerSelection} beats ${computerSelection}! You win!`;
+  } else {
+    computerScore.textContent = ++computerPoints;
+    console.log(playerSelection, computerSelection);
+    roundResults.textContent = `${computerSelection} beats ${playerSelection}! You lose!`;
+  }
+
+  
+}
 
 function handleReplay() {
   location.reload();
@@ -29,7 +50,8 @@ function handleReplay() {
 
 function getPlayerChoice(e) {
   let playerSelection = e.target.id;
-  playerChoice = e.target.textContent;
+  playerPick.textContent = e.target.id;
+  playRound(playerSelection, computerPlay());
 }
 
 // Event Listeners
