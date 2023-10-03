@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Etch-a-Sketch</h1></header>
+
+    <section class="options">
+      <div class="grid-size">
+        <input
+          type="range"
+          name="size"
+          id="size"
+          min="2"
+          max="30"
+          value="16"
+          onchange="handleChange()"
+        />
+        <h3 id="size-value">16 x 16</h3>
+      </div>
+    </section>
+
+    <section class="grid-container"></section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
