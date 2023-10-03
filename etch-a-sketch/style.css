@@ -59,15 +59,6 @@ button {
     background-color: #333;
 }
 
-#white {
-  background-color: white;
-}
-#white:hover {
-  background-color: #e2e2e2;
-}
-
-#rainbow {
-}
 
 #rainbow:hover {
   color: white;
