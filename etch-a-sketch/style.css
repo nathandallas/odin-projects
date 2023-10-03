@@ -21,18 +21,87 @@ h3 {
   padding: 1rem;
 }
 
+.container {
+  display: flex;
+  min-width: 60rem;
+  min-height: none;
+}
+
+.options {
+  position: sticky;
+  right: 2rem;
+  display: inline-block;
+  text-align: center;
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+button {
+  margin: 0.5rem;
+  width: 90%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+#black {
+  background-color: black;
+  color: white;
+}
+
+#black:hover {
+    background-color: #333;
+}
+
+#white {
+  background-color: white;
+}
+#white:hover {
+  background-color: #e2e2e2;
+}
+
+#rainbow {
+}
+
+#rainbow:hover {
+  color: white;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
 .grid-size {
   display: flex;
+  flex-direction: column;
 }
 
 .grid-container {
-  width: fit-content;
   display: flex;
-  margin: auto 0;
-  border: 1px solid black;
 }
 .square {
   border: 1px solid #999;
-  width: 2rem;
-  height: 2rem;
+  background-color: #fff;
+  height: 1rem;
+  width: 1rem;
+}
+
+footer {
+  margin: 1rem;
 }

@@ -9,22 +9,36 @@
   <body>
     <header><h1>Etch-a-Sketch</h1></header>
 
-    <section class="options">
-      <div class="grid-size">
-        <input
-          type="range"
-          name="size"
-          id="size"
-          min="2"
-          max="30"
-          value="16"
-          onchange="handleChange()"
-        />
-        <h3 id="size-value">16 x 16</h3>
-      </div>
+    <section class="container">
+      <aside class="options">
+        <div class="buttons">
+          <h2>Choose a Color</h2>
+          <button id="black">Black</button>
+          <button id="white">White</button>
+          <button id="rainbow">Rainbow</button>
+        </div>
+        <div class="grid-size">
+          <h2>Pick Size</h2>
+          <input
+            type="range"
+            name="size"
+            id="size"
+            min="2"
+            max="30"
+            value="16"
+            onchange="handleSizeChange()"
+          />
+          <h3 id="size-value">16 x 16</h3>
+        </div>
+        <button id="clear">Clear Grid</button>
+      </aside>
+
+      <section class="grid-container"></section>
     </section>
 
-    <section class="grid-container"></section>
+    <footer>
+      Created by <a href="http://github.com/nathandallas">Nathan Challender</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>

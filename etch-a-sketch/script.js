@@ -1,8 +1,8 @@
 const container = document.querySelector(".grid-container");
 const slider = document.getElementById("size");
 let sizeValue = document.getElementById("size-value");
-
 let gridSize = slider.value;
+let color = 'black';
 
 function createGrid() {
   for (j = 0; j < gridSize; j++) {
@@ -19,9 +19,11 @@ function createGrid() {
 
 createGrid();
 
-function handleChange() {
+function handleSizeChange() {
   container.innerHTML = "";
   gridSize = slider.value;
   sizeValue.innerText = `${slider.value} x ${slider.value}`;
   createGrid();
 }
+
+
