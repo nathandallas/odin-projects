@@ -5,10 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Library</title>
     <link rel="stylesheet" href="style.css" />
-    nk
   </head>
+
   <body>
-    <header><h1>Library</h1></header>
+    <!-- MOBILE VIEW -->
+    <header class="mobile-header">
+      <h1>Library</h1>
+      <button>Add a Book</button>
+    </header>
+
+    <!-- TABLET / DESKTOP VIEW -->
+    <aside>
+      <header class="desktop-header"><h1>Library</h1></header>
+    </aside>
+
+    <!-- ADD A BOOK FORM -->
+
+    <section class="form-container">
+      <h2>Add a New Book</h2>
+      <input type="text" placeholder="Title" />
+      <input type="text" placeholder="Author" />
+      <input type="text" placeholder="Pages" />
+      <input type="checkbox" name="read" id="read" />
+      <label for="read">Already Read?</label>
+    </section>
+
+    <!-- LIBRARY BOOKS -->
+
+    <section class="library-container">
+      <div class="library-header">
+        <h2>My Bookshelf</h2>
+        <div class="counter">
+          <h5>Total Books: 0</h5>
+          <h5>Read: 0</h5>
+          <h5>Unread: 0</h5>
+        </div>
+      </div>
+
+      <div class="select-filter">
+        <h4>Filter By:</h4>
+        <input type="radio" name="filter" id="all" value="all" />
+        <label for="all">All</label>
+        <input type="radio" name="filter" id="all" value="read" />
+        <label for="read">Read</label>
+        <input type="radio" name="filter" id="all" value="unread" />
+        <label for="unread">Unread</label>
+      </div>
+      <div class="book-container">
+        <button class="add-card">+</button>
+        <div class="book-card">
+          <h3>Book Title</h3>
+          <h4>By Author Name</h4>
+          <div class="book-details">
+            <p>Pages</p>
+            <input type="checkbox" name="read" id="read" />
+            <label for="read">Read</label>
+          </div>
+        </div>
+        <div class="book-card">
+          <h3>Book Title</h3>
+          <h4>By Author Name</h4>
+          <div class="book-details">
+            <p>Pages</p>
+            <input type="checkbox" name="read" id="read" />
+            <label for="read">Read</label>
+          </div>
+        </div>
+        <div class="book-card">
+          <h3>Book Title</h3>
+          <h4>By Author Name</h4>
+          <div class="book-details">
+            <p>Pages</p>
+            <input type="checkbox" name="read" id="read" />
+            <label for="read">Read</label>
+          </div>
+        </div>
+        <div class="book-card">
+          <h3>Book Title</h3>
+          <h4>By Author Name</h4>
+          <div class="book-details">
+            <p>Pages</p>
+            <input type="checkbox" name="read" id="read" />
+            <label for="read">Read</label>
+          </div>
+        </div>
+        <div class="book-card">
+          <h3>Book Title</h3>
+          <h4>By Author Name</h4>
+          <div class="book-details">
+            <p>Pages</p>
+            <input type="checkbox" name="read" id="read" />
+            <label for="read">Read</label>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <footer>
+      Designed and Built by
+      <a href="http://github.com/nathandallas">Nathan Challender</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>
