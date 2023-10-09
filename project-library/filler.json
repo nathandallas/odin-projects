@@ -1,0 +1,18 @@
+{
+  "books": [
+    {
+      "title": "The Giver",
+      "author": "Lois Lowry",
+      "pages": "208",
+      "read": true,
+      "cover": "./assets/cover-the-giver.jpg"
+    },
+    {
+      "title": "Don't Make Me Think!",
+      "author": "Steve Krug",
+      "pages": "216",
+      "read": false,
+      "cover": "./assets/cover-dmmt.jpg"
+    }
+  ]
+}

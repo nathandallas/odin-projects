@@ -14,8 +14,32 @@ h5 {
   margin-right: 1rem;
 }
 
+.form-container {
+  background-color: #6a85b6;
+  /* position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw; */
+}
+
+.add-books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: 300px;
+  border-radius: 0.5rem;
+}
+
 .select-filter,
-.counter {
+.counter,
+.add-card {
   display: flex;
   align-items: center;
 }
@@ -23,6 +47,7 @@ h5 {
 .book-container {
   display: flex;
   flex-wrap: wrap;
+  background-color: #f9fbff;
 }
 
 .add-card,
@@ -42,11 +67,15 @@ h5 {
 }
 
 .add-card:hover {
-    box-shadow: 0;
+  box-shadow: 0;
 }
 
 .book-card {
   padding: 1rem;
   min-width: 167px;
   background-color: #bac8e0;
+}
+
+footer {
+  background-color: #f9fbff;
 }
