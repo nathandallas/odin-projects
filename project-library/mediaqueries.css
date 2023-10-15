@@ -1,0 +1,27 @@
+@media screen and (min-width: 768px) {
+  .mobile-header {
+    display: none;
+  }
+  .side-nav {
+    display: block;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding: 20px;
+    background-color: #6a85b6;
+  }
+  .library-container,
+  footer {
+    margin-left: 220px;
+  }
+
+  .library-container {
+    height: 100%;
+    min-height: 97vh;
+  }
+}
+@media screen and (min-width: 1024px) {
+}
